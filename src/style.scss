@@ -1,0 +1,110 @@
+@use './styles/header';
+@use './styles/progress';
+@use './styles/hero';
+@use './styles/preloader';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	min-height: 200vh;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 100%;
+}
+h1,
+h2,
+h3 {
+	font-family: 'Merriweather', serif;
+}
+
+.langs {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	transform: translateY(100%);
+	padding: 10px 5px;
+	a {
+		padding: 0.4rem;
+	}
+}
+
+#lang {
+	align-self: center;
+	height: 60px;
+}
+
+.hide {
+	display: none !important;
+}
+
+.pattern {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: -28px;
+	left: -28px;
+	background: linear-gradient();
+}
+.img {
+	opacity: 1;
+}
+
+.dots {
+	position: absolute;
+	width: 100%;
+	height: 95%;
+	top: -24px;
+	left: -24px;
+	background: url('../assets/pattern.svg');
+}
+.right {
+	max-width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (max-width: 768px) {
+		grid-row: 1;
+	}
+}
+
+img {
+	max-width: 100% !important;
+}
+.swiper {
+	max-width: 100%;
+	width: 640px;
+	max-height: 100%;
+}
+.swiper-pagination {
+	pointer-events: all !important;
+}
+.swiper-pagination-bullet {
+	background: wheat !important;
+	border: solid #972354 3px !important;
+}
+.swiper-pagination-bullet-active {
+	background: #972354 !important;
+}
+
+#map {
+	text-align: center;
+}
+
+.leaflet-container {
+	z-index: 10 !important;
+}
+.legend {
+	z-index: 100;
+}

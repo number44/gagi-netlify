@@ -1,0 +1,33 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.1.7",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.3.0",
+    "@types/googlemaps": "^3.43.3",
+    "@types/jump.js": "^1.0.4",
+    "@types/leaflet": "^1.7.7",
+    "@types/swiper": "^5.4.3",
+    "@vitejs/plugin-legacy": "^1.6.4",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "sass": "^1.44.0",
+    "tailwindcss": "^3.0.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "dependencies": {
+    "jump.js": "^1.0.2",
+    "leaflet": "^1.7.1",
+    "ol": "^6.10.0",
+    "swiper": "^7.4.1"
+  }
+}
