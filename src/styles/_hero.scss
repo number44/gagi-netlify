@@ -1,0 +1,96 @@
+.swiper-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	transform: scale3d(1, 1, 1); // 3d to hardware accelerate
+	backface-visibility: hidden !important;
+	will-change: transform;
+	transition: transform 1500ms ease;
+	transition-delay: 0.4s;
+	object-fit: cover;
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(rgba(#2c2c2c, 0.1), rgba(#2c2c2c, 1));
+}
+
+.swiper-slide {
+	h1 {
+		opacity: 0;
+		transition: opacity ease-in-out 0.8s;
+		transform: translateX(100px) scale(0.9);
+		transition: transform ease-in-out 0.8s;
+	}
+}
+.swiper-slide-active {
+	h1 {
+		opacity: 1;
+		transform: translateX(0px) scale(1);
+	}
+}
+
+.arrow {
+	position: absolute;
+	left: 50%;
+	bottom: 2rem;
+	z-index: 3;
+	transform: translateX(-50%);
+	color: white;
+	animation-name: arrowanim;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+@keyframes arrowanim {
+	0% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.swiper-button {
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	z-index: 3;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+.swiper-button-prev {
+	left: 2rem;
+	animation-name: prevanim;
+}
+.swiper-button-next {
+	right: 2rem;
+	animation-name: nextanim;
+	animation-name: nextanim;
+}
+@keyframes prevanim {
+	0% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes nextanim {
+	0% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}

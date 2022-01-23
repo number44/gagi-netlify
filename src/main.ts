@@ -28,31 +28,71 @@ function init() {
 }
 init();
 // core version + navigation, pagination modules:
-import Swiper, { Pagination, EffectCube } from 'swiper';
+import Swiper, { Pagination, EffectCube, EffectCoverflow, EffectCards, Autoplay, Scrollbar, Navigation } from 'swiper';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-cube';
-// configure Swiper to use modules
-Swiper.use([Pagination, EffectCube]);
 
-var swiper = new Swiper('.swiper', {
-	effect: 'cube',
-	grabCursor: true,
+import 'swiper/css/effect-cube';
+import 'swiper/css/effect-creative';
+// configure Swiper to use modules
+
+Swiper.use([Scrollbar, Pagination, EffectCube, EffectCoverflow, EffectCards, Autoplay, Navigation]);
+
+// var swiper = new Swiper('.swiper', {
+// 	effect: 'cube',
+// 	grabCursor: true,
+// 	loop: true,
+// 	cubeEffect: {
+// 		shadow: true,
+// 		slideShadows: true,
+// 		shadowOffset: 20,
+// 		shadowScale: 0.94,
+// 	},
+// 	pagination: {
+// 		el: '.swiper-pagination',
+// 		clickable: true,
+// 	},
+// });
+// swiper.autoplay;
+
+const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
 	loop: true,
-	cubeEffect: {
-		shadow: true,
-		slideShadows: true,
-		shadowOffset: 20,
-		shadowScale: 0.94,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true,
+	},
+	speed: 400,
+
+	pagination: {
+		el: '.swiper-pagination',
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+
+	scrollbar: {
+		el: '.swiper-scrollbar',
+	},
+});
+swiper.init();
+
+const swiper2 = new Swiper('.swiper2', {
+	speed: 400,
+	autoplay: {
+		delay: 3000,
 	},
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
 	},
 });
-swiper.autoplay;
-
+swiper2.autoplay;
 let lists = document.querySelectorAll<HTMLElement>('[data-target]');
 
 const links = Array.from(lists);
