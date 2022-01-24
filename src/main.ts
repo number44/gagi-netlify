@@ -137,7 +137,7 @@ var logoIcon = L.icon({
 	shadowAnchor: [4, 62], // the same for the shadow
 	popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
 });
-L.marker([59.77946, 31.13396], { icon: logoIcon }).addTo(map).bindPopup("<div style='text-align: center'><strong>M2M3</strong><br>Łódź<br>Sierakowskiego 69</div>").openPopup();
+L.marker([59.77946, 31.13396], { icon: logoIcon }).addTo(map).bindPopup("<div style='text-align: center'><strong>Domek w Górach Sowich</strong><br>Jugów<br>Pod Kalenicą 5</div>").openPopup();
 
 const preloader = document.querySelector('.preloader-bg');
 

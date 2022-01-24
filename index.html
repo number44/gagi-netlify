@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="//unpkg.com/alpinejs" defer></script>
 
-		<title>Vite App</title>
+		<title>Domek w Górach Sowich</title>
 	</head>
 	<body x-data="{sidebar : false}" class="max-w-screen break-words">
 		<div class="preloader-bg flex flex-col text-primary">
@@ -78,11 +78,11 @@
 						<div class="content-wrapper relative h-full flex items-center justify-center">
 							<div class="hero-box flex flex-col items-center text-white">
 								<h1 class="text-4xl mb-">Domek w Górach Sowich</h1>
-								<p class="mt-4 text-2xl">Lorem, ipsum dolor.</p>
+								<p class="mt-4 text-2xl">Wypoczynek niedaleko Parku Krajobrazowego</p>
 
 								<div class="btn-grp flex gap-3 flex-col sm:flex-row mt-8">
-									<div class="btn py-2 px-8 mx-1 bg-primary rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-primary hover:bg-white">Informacje</div>
-									<div class="btn py-2 px-8 mx-1 text-primary bg-white rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-white hover:bg-primary">Informacje</div>
+									<div data-target="about" class="btn py-2 px-8 mx-1 bg-primary rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-primary hover:bg-white">Informacje</div>
+									<div data-target="gallery" class="btn py-2 px-8 mx-1 text-primary bg-white rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-white hover:bg-primary">Galeria</div>
 								</div>
 							</div>
 						</div>
@@ -93,7 +93,11 @@
 						<div class="content-wrapper relative h-full flex items-center justify-center">
 							<div class="hero-box flex flex-col items-center text-white">
 								<h1 class="text-4xl mb-">Domki DobreMiejsce</h1>
-								<p class="mt-4 text-2xl">Lorem, ipsum dolor.</p>
+								<p class="mt-4 text-2xl">Nowy stylowy domek z niezbędnym wyposażeniem</p>
+								<div class="btn-grp flex gap-3 flex-col sm:flex-row mt-8">
+									<div data-target="about" class="btn py-2 px-8 mx-1 bg-primary rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-primary hover:bg-white">Informacje</div>
+									<div data-target="gallery" class="btn py-2 px-8 mx-1 text-primary bg-white rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-white hover:bg-primary">Galeria</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -118,13 +122,16 @@
 				<h1 class="text-4xl sm:text-6xl pb-24 text-center">Informacje</h1>
 				<div class="grid grid-cols-1 gap-3 md:grid-cols-2">
 					<div class="left mb-24 p-4">
-						<h1 class="text-4xl">Lorem, ipsum.</h1>
-						<p class="my-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quo illum veniam voluptatem recusandae eligendi at suscipit ratione nobis eos.</p>
+						<h1 class="text-4xl">Serdecznie zapraszam</h1>
+						<p class="my-6">Zapraszam do mojego domku w Górach Sowich. Domek znajduje się w pobliżu <strong>Parku Krajobrazowego Gór Sowich.</strong></p>
+						<p>Ze względu na zróżnicowane wysokości stanowią one świetne miejsce dla miłośników górskich wędrówek.</p>
+						<p>Góry Sowie są pełne atrakcji i tajemniczych historii</p>
+						<p>Warto wspomnieć chociażby o tutejszych Bunkrach , o Sztolnie Walimskim i Podziemnym miaście Osówka</p>
 					</div>
 					<div class="right">
 						<div class="relative">
 							<div class="relative dots"></div>
-							<img class="relative img" src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987429.webp" alt="" />
+							<img class="relative img" src="http://res.map4u.pl/z_2/o_3622197/900x600_5_srebrna_gora_92.jpg" alt="" />
 						</div>
 					</div>
 				</div>
@@ -155,8 +162,13 @@
 						</div>
 					</div>
 					<div class="left mb-24 p-4">
-						<h1 class="text-4xl">Lorem, ipsum.</h1>
-						<p class="my-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quo illum veniam voluptatem recusandae eligendi at suscipit ratione nobis eos.</p>
+						<h1 class="text-4xl">Zapraszam</h1>
+						<p>Domek jest wybudowany w 2020r więc jest nowy i "Nic zawali się na łeb"</p>
+						<p class="my-6">
+							Domek ogrzewany jest kominkiem .W łazience jest prysznic ,toaleta i umywalka, ciepła woda ogrzewana jest przepływowo ,istnieje ogrzewanie podłogowe. Do dyspozycji gości jest suszarka do włosów oraz ręczniki. W kuchni jest czteropalnikowa płyta indukcyjna ,czajnik elektryczny. Na wyposażeniu
+							kuchni są garnki, patelnie, naczynia, tarka do warzyw oraz komplet sztućców. W salonie jest rozkładana dwuosobowa sofa, dwa fotele. Cztery rozkładane krzesła i lekki rozkładany stół umożliwiają posiłki na tarasie z pięknym widokiem na góry. Na antresoli jest dwuosobowy materac oraz pościel
+							dla 2-4 osób.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -172,6 +184,7 @@
 				height="400"
 				frameborder="0"
 				scrolling="no"
+				p
 			></iframe>
 		</section>
 
@@ -277,10 +290,87 @@
 						<!-- 1 -->
 						<div class="swiper-slide w-full h-full flex-center text-center">
 							<figure class="w-full max-w-4xl">
-								<img class="" src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987429.webp" alt="" />
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987429.webp" alt="" />
 							</figure>
 						</div>
-						<div class="swiper-slide w-full h-full flex-center text-center">index</div>
+						<!-- 2 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987444.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 3 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987503.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 4 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987513.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 5 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987612.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 6 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987631.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 7 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987639.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 8 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987797.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 9 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987816.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 10 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987943.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 11 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987968.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 12 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642988095.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 13 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642988102.webp" alt="" />
+							</figure>
+						</div>
+						<!-- 14 -->
+						<div class="swiper-slide w-full h-full flex-center text-center">
+							<figure class="w-full max-w-4xl">
+								<img src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642988110.webp" alt="" />
+							</figure>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -291,7 +381,7 @@
 				<div class="w-32 h-1 bg-primary rounded-md mx-auto"></div>
 				<h1 class="text-4xl text-center my-8">Lorem, ipsum.</h1>
 				<div class="grid grid-cols-1 md:grid-cols-2 mb-32">
-					<div class="">
+					<div >
 						<div class="swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -315,7 +405,7 @@
 					</div>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-2">
-					<div class="">
+					<div >
 						<div class="swiper bg-yellow-400">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -346,39 +436,30 @@
 			<div class="max-w-6xl text-primary py-8 mx-auto text-center flex justify-center items-center flex-col">
 				<div class="flex mt-8 justify-center text-center">
 					<h2 class="text-4xl sm:text-6xl mb-2">Kontakt</h2>
-
-					<div class="h-2 bg-pr"></div>
 				</div>
 
 				<div class="w-32 h-1 mt-8 mb-4 bg-primary rounded-md mx-auto"></div>
+
 				<div>
-					<a href="tel:+78835400" class="flex mt-4 hover:scale-105 transition-transform duration-150">
+					<a href="tel:+788935400" class="flex mt-4 transition-transform duration-150">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
 						</svg>
-						<span class="ml-4 text-lg tracking-normal">788-935-400</span>
-					</a>
-				</div>
-				<div>
-					<a href="tel:+788935400" class="flex mt-4 hover:scale-105 transition-transform duration-150">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-						</svg>
-						<span class="ml-4 text-lg tracking-normal">788-935-400</span>
+						<span class="ml-4 text-lg">788-935-400</span>
 					</a>
 
-					<a href="mailto:gabinetakacjowa@gmail.com " class="flex mt-4 hover:scale-105 transition-transform duration-150">
+					<a href="mailto:gabinetakacjowa@gmail.com " class="flex mt-4 transition-transform duration-150">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 						</svg>
 						<span class="ml-4 text-lg">gabinetakacjowa@gmail.com </span>
 					</a>
-					<a href="" class="flex mt-4 hover:scale-105 transition-transform duration-150">
+					<a href="" class="flex mt-4 transition-transform duration-150">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 						</svg>
-						<span class="text-left ml-4 text-lg">Łódź ,<br />ul. Sierakowskiego 69</span>
+						<span class="text-left ml-4 text-lg">Łódź ,<br />ul.Sierakowskiego69</span>
 					</a>
 				</div>
 			</div>
