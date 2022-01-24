@@ -3,7 +3,11 @@
 @use './styles/header';
 @use './styles/progress';
 @use './styles/hero';
+@use './styles/slide-show';
+
 @use './styles/preloader';
+@use './styles/gallery';
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Serif:wght@700&display=swap');
 
 @tailwind base;
@@ -100,4 +104,33 @@ img {
 }
 .legend {
 	z-index: 100;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+[data-target] {
+	cursor: pointer;
+	/* Attribute exists */
+}
+
+.d-none {
+	display: none !important;
+}
+
+.phone:hover {
+	animation-name: phoneanim;
+	animation-direction: alternate;
+	animation-duration: 0.3s;
+}
+@keyframes phoneanim {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }

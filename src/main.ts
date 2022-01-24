@@ -1,5 +1,6 @@
 import './style.scss';
-
+import gallery from './gallery';
+gallery();
 function init() {
 	const progressBar = document.querySelector('.progress-bar') as HTMLDivElement;
 	const winHeight: number = window.document.body.scrollHeight - window.innerHeight;
@@ -83,16 +84,29 @@ const swiper = new Swiper('.swiper', {
 swiper.init();
 
 const swiper2 = new Swiper('.swiper2', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+
 	speed: 400,
-	autoplay: {
-		delay: 3000,
-	},
+	slidesPerView: 1,
 	pagination: {
 		el: '.swiper-pagination',
-		clickable: true,
+	},
+	keyboard: {
+		enabled: true,
+	},
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper2-button-next',
+		prevEl: '.swiper2-button-prev',
+	},
+
+	scrollbar: {
+		el: '.swiper-scrollbar',
 	},
 });
-swiper2.autoplay;
+swiper2.init();
 let lists = document.querySelectorAll<HTMLElement>('[data-target]');
 
 const links = Array.from(lists);
@@ -106,7 +120,7 @@ links.forEach((link) => {
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 var map = L.map('map', {
-	center: L.latLng(51.794479, 19.43786),
+	center: L.latLng(59.77946, 31.13396),
 	zoom: 15,
 });
 
@@ -114,7 +128,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 var logoIcon = L.icon({
-	iconUrl: 'https://m2m3.pl/assets/marker-white.png',
+	iconUrl: 'http://server908958.nazwa.pl/laravel/public/storage/uploads/markergreen.png',
 	// shadowUrl: '../assets/marker-white.png',
 
 	iconSize: [38, 50], // size of the icon
@@ -123,7 +137,7 @@ var logoIcon = L.icon({
 	shadowAnchor: [4, 62], // the same for the shadow
 	popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
 });
-L.marker([51.794479, 19.43786], { icon: logoIcon }).addTo(map).bindPopup("<div style='text-align: center'><strong>M2M3</strong><br>Łódź<br>Sierakowskiego 69</div>").openPopup();
+L.marker([59.77946, 31.13396], { icon: logoIcon }).addTo(map).bindPopup("<div style='text-align: center'><strong>M2M3</strong><br>Łódź<br>Sierakowskiego 69</div>").openPopup();
 
 const preloader = document.querySelector('.preloader-bg');
 

@@ -33,14 +33,19 @@ nav {
 }
 
 .logo {
-	transition: height ease-in-out 0.3s;
-	background: #fff;
+	transition: all ease-in-out 0.3s;
+	background: rgba(rgb(146, 145, 145), 1);
 	transform-origin: top;
 	height: 100px;
 	transform: translateY(10px);
+	border-radius: 5%;
+	padding: 1rem;
 }
 .logo-scrolled {
 	height: 60px;
+	padding: 0rem;
+	background: rgba(#fff, 1);
+
 	transform: translateY(0px);
 }
 
