@@ -11,27 +11,26 @@
 	object-fit: cover;
 }
 
-.overlay {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background: linear-gradient(rgba(#2c2c2c, 0.1), rgba(#2c2c2c, 1));
-}
-
 .swiper-slide {
 	h1 {
 		opacity: 0;
-		transition: opacity ease-in-out 0.8s;
-		transform: translateX(100px) scale(0.9);
-		transition: transform ease-in-out 0.8s;
+		transform: translateY(-100px) scale(0.9);
+		transition: transform ease-in-out 0.8s, opacity ease-in-out 0.8s;
+	}
+	p {
+		opacity: 0;
+		transform: scale(0.1);
+		transition: transform ease-in-out 0.8s, opacity ease-in-out 0.8s;
 	}
 }
 .swiper-slide-active {
 	h1 {
 		opacity: 1;
-		transform: translateX(0px) scale(1);
+		transform: translateY(0px) scale(1);
+	}
+	p {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
 
@@ -75,7 +74,6 @@
 .swiper-button-next {
 	right: 2rem;
 	animation-name: nextanim;
-	animation-name: nextanim;
 }
 @keyframes prevanim {
 	0% {
@@ -92,5 +90,23 @@
 	}
 	100% {
 		transform: translateX(0px);
+	}
+}
+
+.hero-anim {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	transform: translateX(-0vw) !important;
+	animation-name: heroanim;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+@keyframes heroanim {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translate(100%);
 	}
 }

@@ -4,7 +4,7 @@ header {
 	transition: all ease-in-out 0.3s;
 	// background: #2c2c2c;
 	// opacity: 0.6;
-	background: linear-gradient(rgba(#2c2c2c, 1), rgba(#2c2c2c, 0.5));
+	background: linear-gradient(rgba(#fff, 1), rgba(#2c2c2c, 0));
 	color: whitesmoke;
 }
 .header-scrolled {
@@ -34,7 +34,8 @@ nav {
 
 .logo {
 	transition: all ease-in-out 0.3s;
-	background: rgba(rgb(146, 145, 145), 1);
+	// background: rgba(rgb(146, 145, 145), 1);
+	background: white;
 	transform-origin: top;
 	height: 100px;
 	transform: translateY(10px);
@@ -45,20 +46,5 @@ nav {
 	height: 60px;
 	padding: 0rem;
 	background: rgba(#fff, 1);
-
 	transform: translateY(0px);
-}
-
-select {
-	appearance: none;
-	// Additional resets for further consistency
-	background-color: transparent;
-	border: none;
-	padding: 0 1em 0 0;
-	margin: 0;
-	width: 100%;
-	font-family: inherit;
-	font-size: inherit;
-	cursor: inherit;
-	line-height: inherit;
 }

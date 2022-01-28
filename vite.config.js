@@ -1,4 +1,3 @@
-import handlebars from 'vite-plugin-handlebars';
 import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
 

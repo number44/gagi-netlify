@@ -8,7 +8,7 @@
 
 		<title>Domek w Górach Sowich</title>
 	</head>
-	<body x-data="{sidebar : false}" class="max-w-screen break-words">
+	<body x-data="{sidebar : false}" class="max-w-screen overflow-x-hidden break-words">
 		<div class="preloader-bg flex flex-col text-primary">
 			<div class="circle">
 				<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,35 +66,38 @@
 
 		<!-- Start -->
 
-		<div id="hero" class="relative">
+		<div id="hero" class="relative hidden">
 			<svg class="arrow cursor-pointer h-6 w-6" data-target="about" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
 			</svg>
 			<div class="swiper w-full h-screen">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img class="swiper-image" src="./assets/DSC_6453.JPG" alt="" />
+					<div class="swiper-slide relative">
+						<img class="swiper-image" src="./assets/images/hero.jpg" alt="" />
+
 						<div class="overlay"></div>
 						<div class="content-wrapper relative h-full flex items-center justify-center">
 							<div class="hero-box flex flex-col items-center text-white">
-								<h1 class="text-4xl mb-">Domek w Górach Sowich</h1>
-								<p class="mt-4 text-2xl">Wypoczynek niedaleko Parku Krajobrazowego</p>
+								<h1 class="text-center text-4xl sm:text-6xl">Domek w Górach Sowich</h1>
+								<p class="mt-4 text-center text-2xl">Wypoczynek niedaleko Parku Krajobrazowego</p>
 
-								<div class="btn-grp flex gap-3 flex-col sm:flex-row mt-8">
+								<div class="btn-grp text-center flex gap-3 flex-col sm:flex-row mt-8">
 									<div data-target="about" class="btn py-2 px-8 mx-1 bg-primary rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-primary hover:bg-white">Informacje</div>
 									<div data-target="gallery" class="btn py-2 px-8 mx-1 text-primary bg-white rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-white hover:bg-primary">Galeria</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide relative">
 						<img class="swiper-image" src="./assets/DSC_6455.JPG" alt="" />
+
 						<div class="overlay"></div>
 						<div class="content-wrapper relative h-full flex items-center justify-center">
 							<div class="hero-box flex flex-col items-center text-white">
-								<h1 class="text-4xl mb-">Domki DobreMiejsce</h1>
-								<p class="mt-4 text-2xl">Nowy stylowy domek z niezbędnym wyposażeniem</p>
-								<div class="btn-grp flex gap-3 flex-col sm:flex-row mt-8">
+								<h1 class="text-center text-4xl sm:text-6xl">Domek w Górach Sowich</h1>
+								<p class="mt-4 text-center text-2xl">Wypoczynek niedaleko Parku Krajobrazowego</p>
+
+								<div class="btn-grp text-center flex gap-3 flex-col sm:flex-row mt-8">
 									<div data-target="about" class="btn py-2 px-8 mx-1 bg-primary rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-primary hover:bg-white">Informacje</div>
 									<div data-target="gallery" class="btn py-2 px-8 mx-1 text-primary bg-white rounded-full font-bold border-4 cursor-pointer transition-colors duration-300 leading-loose tracking-wide uppercase border-primary hover:text-white hover:bg-primary">Galeria</div>
 								</div>
@@ -117,21 +120,56 @@
 		</div>
 
 		<!-- Finish -->
+		<!-- infosy -->
 		<section id="about" class="bg-primary py-24 text-zinc-100">
 			<div class="max-w-6xl mx-auto">
-				<h1 class="text-4xl sm:text-6xl pb-24 text-center">Informacje</h1>
-				<div class="grid grid-cols-1 gap-3 md:grid-cols-2">
-					<div class="left mb-24 p-4">
-						<h1 class="text-4xl">Serdecznie zapraszam</h1>
-						<p class="my-6">Zapraszam do mojego domku w Górach Sowich. Domek znajduje się w pobliżu <strong>Parku Krajobrazowego Gór Sowich.</strong></p>
-						<p>Ze względu na zróżnicowane wysokości stanowią one świetne miejsce dla miłośników górskich wędrówek.</p>
-						<p>Góry Sowie są pełne atrakcji i tajemniczych historii</p>
-						<p>Warto wspomnieć chociażby o tutejszych Bunkrach , o Sztolnie Walimskim i Podziemnym miaście Osówka</p>
+				<h1 class="text-4xl sm:text-6xl pb-24 text-center info">Informacje</h1>
+				<div class="flex flex-wrap">
+					<div class="tar left px-8 order-last w-full md:w-1/2 mb-24 p-4">
+						<h1 class="text-4xl">Witamy w domku w Górach Sowich.</h1>
+						<div>
+							<p>Domek usytuowany jest na zboczu Kalenicy(drugiej pod względem wysokości góry w tym paśmie).</p>
+							Znajduje się on na terenie Parku Krajobrazowego Gór Sowich, w pobliżu szlaków turystycznych wiodących na Kalenicę, Rymarz ,schronisko "Zygmuntówka", czy Wielką Sowę. <br />
+							<br />
+							W Góry Stołowe jest stąd 28km.Można tam zwiedzić Błędne Skały, wejść na Szczeliniec (najwyższy szczyt tych gór),podziwiać widoki z Narożniaka,czy przespacerować się wśród Skalnych Grzybów i innych tajemniczych form skalnych. W upalne dni można skorzystać z kąpieliska, plaży,czy kajaków
+							oferowanych w wypożyczalni przy zalewie w Radkowie. <br /><br />
+							Do granicy z Republiką Czeską jedzie się około 30 minut. Oprócz czeskiego piwa godne polecenia jest Skalne Miasto z korytarzami skalnymi i imponującej wielkości turniami skalnymi,wodospadami oraz jeziorem ,po którym można pływać łódką. Jest to doskonałe miejsce dla miłośników sportów zimowych
+							.W pobliżu znajduje się wiele stoków narciarskich o różnym stopniu trudności: Rymarz 3km,Rzeczka 8km,Przygórze 6km,Zieleniec 23km,Góra Dzikowiec 33km,).Góry Sowie to również doskonałe miejsce do uprawiania narciarstwa biegowego. Na miłośników tego sportu czekają przygotowane trasy o różnej
+							długości i stopniu trudności.Więcej informacji tutaj: <a class="text-orange-500" href="https://www.facebook.com/sowiogorskietrasydonarciarstwabiegowego">Tutaj .</a> <br /><br />
+							Pasjonaci historii zwiedzą tu podziemne kompleksy Riese z czasów II Wojny Światowej i Muchołapkę, Do Zamku Książ jest stąd około 50km. Miłośnikom spływów pontonowych polecam rafting Przełomem Bardzkim.
+						</div>
 					</div>
-					<div class="right">
-						<div class="relative">
-							<div class="relative dots"></div>
-							<img class="relative img" src="http://server908958.nazwa.pl/laravel/public/storage/uploads/media/lg/1642987444.webp" alt="" />
+					<div class="xxxx aaaa w-full order-1 md:w-1/2">
+						<div class="swiper-info">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide p-8">
+									<img class="aspect-[12/8]" src="./assets/IMG_20220120_130255.jpg" alt="" />
+								</div>
+								<div class="swiper-slide p-8">
+									<img class="aspect-[12/8]" src="./assets/IMG_20220120_130255.jpg" alt="" />
+								</div>
+								<div class="swiper-slide p-8">
+									<img class="aspect-[12/8]" src="./assets/IMG_20220120_130255.jpg" alt="" />
+								</div>
+								<div class="swiper-slide p-8">
+									<img class="aspect-[12/8]" src="./assets/IMG_20220120_130255.jpg" alt="" />
+								</div>
+								<div class="swiper-slide p-8">
+									<img class="aspect-[12/8]" src="./assets/262241422.jpg" alt="" />
+								</div>
+							</div>
+							<div class="info-arrows justify-center gap-8 flex">
+								<div class="swiperinfo-button-prev cursor-pointer hover:text-orange-500">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+									</svg>
+								</div>
+								<div class="swiperinfo-button-next cursor-pointer hover:text-orange-500">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+									</svg>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
