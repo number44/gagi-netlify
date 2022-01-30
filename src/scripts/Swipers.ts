@@ -4,7 +4,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-cube';
 import 'swiper/css/effect-creative';
 import Swiper, { Pagination, EffectCube, EffectCoverflow, EffectCards, Autoplay, Scrollbar, Navigation } from 'swiper';
-import gsap from 'gsap';
 
 const Swipers = () => {
 	Swiper.use([Scrollbar, Pagination, EffectCube, EffectCoverflow, EffectCards, Autoplay, Navigation]);
